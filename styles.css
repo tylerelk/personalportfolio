@@ -229,16 +229,19 @@ header * {
 
 /*Media query for mobile devices*/
 
-@media (max-width: 768px) {
+@media (min-width: 390), (max-width: 768px) {
   
-  /*html, body {
+  :root {
+    --highlight: var(--darkblue);
+  }
+  
+  html, body {
     overflow-x: hidden;
-  }*/
+    width: 100vw;
+  }
 
   .mobile-hide {
     display: none;
-    margin: 0;
-    padding: 0;
   }
 
   .mobile-only {
@@ -249,13 +252,36 @@ header * {
     display: none;
   }
 
-  #nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #navbar {
     position: fixed;
-    background-color: var(--highlight);
+    top: 94%;
     width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #nav-links {
+    padding-left: 0;
+  }
+
+  #welcome-section {
+    text-align: center;
+  }
+
+  #hi {
+    font-size: 50px;
+  }
+
+  .tile-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .tile {
+    width: 90vw;
+    height: auto;
   }
 
 }
