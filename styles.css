@@ -32,6 +32,10 @@ section {
   text-align: justify;
 }
 
+.mobile-only {
+  display: none;
+}
+
 header * {
   color: white;
 }
@@ -223,4 +227,35 @@ header * {
   color: var(--blue);
 }
 
-@media (min-width: 850px) {}
+/*Media query for mobile devices*/
+
+@media (max-width: 480px) {
+  
+  /*html, body {
+    overflow-x: hidden;
+  }*/
+
+  .mobile-hide {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .demographics {
+    display: none;
+  }
+
+  #nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--highlight);
+    width: 100vw;
+  }
+
+}
