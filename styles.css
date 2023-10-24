@@ -221,6 +221,7 @@ header * {
 .fa {
   color: var(--darkblue);
   margin: 0 20px;
+  font-size: 6rem;
 }
 
 .fa:hover {
@@ -232,7 +233,7 @@ header * {
 @media (min-width: 390), (max-width: 768px) {
   
   :root {
-    --highlight: var(--darkblue);
+    --highlight: var(--blue);
   }
   
   html, body {
@@ -269,19 +270,55 @@ header * {
     text-align: center;
   }
 
+  #welcome-section h2 {
+    font-size: 24px;
+  }
+
   #hi {
-    font-size: 50px;
+    font-size: 35px;
   }
 
   .tile-wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100vw;
+    margin-top: -6rem;
   }
 
   .tile {
     width: 90vw;
-    height: auto;
+    height: fit-content;
+    text-align: center;
+    padding: 0;
+  }
+
+  .subsection-title, h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #projects {
+    height: 65vh;
+  }
+
+  #outro {
+    height: 20vh;
+    display: block;
+  }
+
+  #outro h1 {
+    font-size: 1rem;
+    margin-top: -10px;;
+  }
+
+  .ed-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ed-wrapper .tile {
+    list-style-type: none;
   }
 
 }
