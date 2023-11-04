@@ -150,6 +150,10 @@ header * {
   flex-direction: column;
 }
 
+.ed-wrapper .tile {
+  list-style-type: none;
+}
+
 #certifications {
   background-color: var(--blue);
   height: 100vh;
@@ -165,16 +169,19 @@ header * {
 }
 
 #certifications .tile:hover {
-  animation: card-grow 150ms linear forwards;
+  animation: card-grow 300ms linear forwards;
+}
+
+#certifications .tile{
+  width: 20rem;
+  height: 20rem;
 }
 
 @keyframes card-grow {
   0% {}
 
   100% {
-    width: 200px;
-    height: 200px;
-    font-size: 20px;
+    font-size: 2em;
     background-color: var(--darkblue);
     color: var(--blue);
   }
@@ -182,7 +189,7 @@ header * {
 
 #projects {
   background-color: var(--darkblue);
-  height: 100vh;
+  height: 20vh;
   padding: 10%;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -360,5 +367,17 @@ header * {
   #certifications .tile>:nth-of-type(5) {
     grid-area: 4 / 1 / 5 / 2;
   }
+
+  #certifications .tile{
+    width: 40vw;
+    height: 40vw;
+  }
+
+  #projects {
+    width: 90vw;
+    height: auto;
+    display: flex;
+  }
+  
 
 }

@@ -1,0 +1,147 @@
+/* Setup and properties for all elements */
+
+* {
+    font-family: monospace, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --blue: #99b8dd;
+    --highlight: #f3966b;
+    --darkblue: #213549;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mobile-only {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Navbar settings */
+
+#navbar {
+    width: 100vw;
+    height: 12vh;
+    background: var(--highlight);
+    position: fixed;
+    margin: auto;
+    padding: 0 2em;
+    top: 0%;
+    left: 0%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links {
+    list-style-type: none;
+    text-align: right;
+    padding: 0 2.5em;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#home-button {
+    font-size: 3em;
+}
+
+.nav-link {
+    height: 100%;
+}
+
+a {
+    color: var(--darkblue);
+    padding: 3.8rem 5px;
+}
+
+.nav-link a:hover {
+    animation: link-highlight 300ms linear forwards;
+}
+
+@keyframes link-highlight {
+    0% {}
+
+    100% {
+        background-color: var(--darkblue);
+        color: var(--blue);
+        font-weight: 800;
+    }
+
+}
+
+/* Settings for all body sections */
+
+.main-section {
+    height: 100vh;
+    width: auto;
+    padding: 10% 15%;
+    font-size: 2em;
+}
+
+.tile-wrapper {
+    display: flex;
+}
+
+/* Welcome section settings */
+
+#welcome-section {
+    background-color: var(--darkblue);
+    color: var(--blue);
+    text-align: center;
+}
+
+#hi {
+    font-size: 3em;
+}
+
+.demographics {
+    font-size: 0.8em;
+}
+
+/* Experience section settings */
+
+#experience {
+    background-color: var(--blue);
+    color: var(--darkblue);
+    font-size: 1.5em;
+}
+
+/* Education section settings */
+
+#education {
+    background-color: var(--darkblue);
+    color: var(--blue);
+}
+
+/* certs/license section settings */
+
+#certifications {
+    background-color: var(--blue);
+    color: var(--darkblue);
+}
+
+/* projects section settings */
+
+#projects {
+    background-color: var(--darkblue);
+    color: var(--blue);
+}
+
+/* outro/links section settings */
+
+#outro {
+    background-color: var(--highlight);
+    color: var(--darkblue);
+}

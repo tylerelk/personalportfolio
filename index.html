@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -15,7 +15,7 @@
 
     <header>
         <nav id="navbar">
-            <div><a href="#top" class="mobile-hide">&#127973</a></div>
+            <div id="home-button"><a href="#top" class="mobile-hide">&#128075</a></div>
             <ul id="nav-links">
                 <li class="mobile-only"><a href="#top" class="mobile-only">&#128070</a></li>
                 <li class="nav-link"><a href="#experience" class="mobile-hide">Professional Experience</a><a
@@ -26,13 +26,15 @@
                         href="#certifications" class="mobile-only">&#128220</a></li>
                 <li class="nav-link"><a href="#projects" class="mobile-hide">Projects and Committees</a><a
                         href="#projects" class="mobile-only">&#128300</a></li>
+                <li class="nav-link"><a href="#outro" class="mobile-hide">Links</a><a
+                        href="#outro" class="mobile-only">&#128300</a></li>
             </ul>
         </nav>
     </header>
 
     <!--Welcome section-->
 
-    <section id="welcome-section">
+    <section id="welcome-section" class = "main-section">
         <h1 id="hi">Hi, friend &#128075</h1>
         <h2>Nurse Tyler Here 👨🏽‍⚕️</h2>
         <p class="demographics">My name is Tyler Lewis. I am a bachelor's-prepared Registered Nurse with experience in
@@ -48,12 +50,12 @@
             the goal of attaining skills as a full-stack web developer and programmer. I'm currently rounding out my
             HTML/CSS skills, and am just breaking into JavaScript &#128549. My goal is to become proficient
             with multiple programming languages, focusing on data science and machine learning.</p>
-        <p>I've done some cool things during my career. take a look &#128071</p>
+        <p>I've done some cool things during my career. take a look <a href="#experience">&#128071</a></p>
     </section>
 
     <!--Experience section-->
 
-    <section id="experience">
+    <section id="experience" class="main-section">
         <div class="tile-wrapper">
             <div>
                 <h2 class="section-title">
@@ -118,7 +120,7 @@
 
     <!--Education section-->
 
-    <section id="education">
+    <section id="education" class="main-section">
         <div class="ed-wrapper">
             <h2 class="section-title">
                 Education
@@ -154,7 +156,7 @@
 
     <!--Certs/License section-->
 
-    <section id="certifications">
+    <section id="certifications" class="main-section">
         <h2 class="section-title">
             Licensure & Certifications
         </h2>
@@ -180,13 +182,14 @@
 
     <!--Projects, committees-->
 
-    <section id="projects">
+    <section id="projects" class="main-section">
         <h2 class="section-title">
             Projects, Committees, and Volunteer Work
         </h2>
         <div class="project-section" id="nursing-section">
             <ul class="project-list">
                 <li class="project">NYU Rory Meyers College of Nursing Alumni Mentor</li>
+                <li class="project">Daisy Award Selection Committee</li>
                 <li class="project">American Red Cross Disaster Action Team</li>
             </ul>
         </div>
@@ -207,8 +210,8 @@
 
     <!--Outro, thanks section-->
 
-    <section id="outro">
-        <h1>Thanks&#128075<br>I look forward to working with you and your team!</h1>
+    <section id="outro" class="main-section">
+        <h1>Thanks!<br>I look forward to working with you and your team &#129309</h1>
         <div id="social-links">
             <a href="https://github.com/tylerelk" class="fa fa-github" target="_blank" id="profile-link"
                 style="font-size: 4rem"></a>
