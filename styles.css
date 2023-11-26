@@ -239,3 +239,53 @@ a {
 .fa:hover {
     color: var(--darkblue)
 }
+
+/* Mobile settings */
+
+@media only screen and (max-width: 600px) {
+    .mobile-only {
+        display: flex;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #hi {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: fit-content;
+    }
+
+    #welcome-section {
+        height: 100vh;
+    }
+
+    .job-wrapper {
+        flex-direction: column;
+    }
+
+    .tile {
+        width: 60vw;
+        height: fit-content;
+    }
+
+    #social-links {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
