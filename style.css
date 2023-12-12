@@ -145,6 +145,20 @@ body {
     overflow: hidden;
 }
 
+.surprise {
+    color: transparent;
+}
+
+.surprise:hover {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        color: var(--dark);
+    }
+}
+
 /* Settings for the Contact section */
 
 #contact {
@@ -227,7 +241,24 @@ body {
         height: 30%;
     }
 
-    .card > img {
+    .card-body {
+        position: relative;
+        overflow-y: hidden;
+    }
+
+    .company-logo, .project-svg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25%;
+        opacity: 50%;
+    }
+
+    .project-svg {
+        overflow-x: hidden;
+    }
+
+    .card-text {
         display: none;
     }
 }
@@ -240,7 +271,7 @@ body {
     }
 
     .h1 {
-        font-size: 9rem;
+        font-size: 6rem;
     }
 
     section {
@@ -258,10 +289,6 @@ body {
     }
 
     .grid-spacer, .top-left, .people-container {
-        display: none;
-    }
-
-    .card-text {
         display: none;
     }
 }
