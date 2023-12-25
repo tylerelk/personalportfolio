@@ -72,6 +72,7 @@ body {
     border: 1px solid var(--dark);
     font-size: 0.9em;
     width: 18rem;
+    position: relative;
 }
 
 .card-body > .btn {
@@ -221,6 +222,50 @@ body {
     object-fit: cover;
 }
 
+.rotating-items {
+    overflow: hidden;
+    grid-row: span 2;
+    position: relative;
+    width: 100%;
+}
+
+.list-tech {
+    list-style-type: none;
+    animation: ul-shift 10s cubic-bezier(0.41, 1.62, 0.58, 1) infinite;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 45%;
+}
+
+.list-tech > li {
+    font-size: 5em;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+}
+
+@keyframes ul-shift {
+    20% {
+        transform: translateY(-100%);
+    }
+    40% {
+        transform: translateY(-200%);
+    }
+    60% {
+        transform: translateY(-300%);
+    }
+    80% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(-500%);
+    }
+}
+
+/* Media queries for screen sizes */
+
 @media (max-width: 1370px) {
 
     .people-container > h1 {
@@ -265,6 +310,10 @@ body {
 
 @media (max-width: 576px) {
 
+    .navbar {
+        display: none;
+    }
+
     .headline-container {
         width: 90vw;
         margin: auto;
@@ -291,4 +340,25 @@ body {
     .grid-spacer, .top-left, .people-container {
         display: none;
     }
+
+    .contact-details > h2 {
+        text-align: center;
+    }
+
+    .company-logo {
+        position: absolute;
+        top: 1.5rem;
+        width: 10rem;
+    }
+
+    .project-svg {
+        position: absolute;
+        top: -2rem;
+        right: 1rem;
+    }
+
+    .list-tech > li {
+        font-size: 3rem;
+    }
+
 }
