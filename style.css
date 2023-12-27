@@ -68,11 +68,22 @@ body {
 }
 
 .card {
-    height: 100%;
+    height: clamp(8rem, 30rem, 40em);
     border: 1px solid var(--dark);
     font-size: 0.9em;
-    width: 18rem;
+    width: clamp(20%, 18rem, 20rem);
     position: relative;
+    box-shadow: 3px 3px 10px lightgrey;
+}
+
+.card:hover {
+    animation: card-bold 0.5s linear forwards;
+}
+
+@keyframes card-bold {
+    to {
+        box-shadow: 6px 6px 10px gray;
+    }
 }
 
 .card-body > .btn {
@@ -107,7 +118,11 @@ body {
 }
 
 #bio2 {
-    background: linear-gradient(180deg, var(--highlight1), transparent);
+    background: linear-gradient(180deg, var(--highlight1), var(--highlight2));
+}
+
+#bio3 {
+    background: linear-gradient(180deg, var(--highlight2), transparent);
 }
 
 .grid-container {
@@ -119,8 +134,27 @@ body {
     height: 90vh;
     padding-bottom: 10vh;
     margin: auto;
-    margin-bottom: 10vh;
     padding: 2rem;
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+    text-align: right;
+}
+
+.lang-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 5px solid var(--light)
+}
+
+.lang-logos img {
+    width: 20%;
 }
 
 .grid-item {
@@ -308,6 +342,8 @@ body {
     }
 }
 
+/*Mobile Settings*/
+
 @media (max-width: 576px) {
 
     .navbar {
@@ -358,6 +394,10 @@ body {
     }
 
     .list-tech > li {
+        font-size: 3rem;
+    }
+
+    .grid-item > h1 {
         font-size: 3rem;
     }
 
