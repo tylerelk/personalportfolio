@@ -1,0 +1,136 @@
+:root {
+    --light: #fcf9f1;
+    --dark: #300511;
+    --highlight1: #DD4A48;
+    --highlight2: #7FADBA;
+}
+
+html {
+    background-image: url(./images/leaves.jpg);
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.panel-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.panel {
+    min-width: 5rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 0;
+    transition:
+        flex 1s
+    ;
+}
+
+.panel > img {
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.panel > * {
+    color: transparent;
+    background-color: transparent;
+    transition: 1s;
+    padding: 1rem;
+}
+
+.panel > *:last-child {
+    transform: translateY(200%);
+}
+
+.project-container {
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+
+.pan1 {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.pan2 {
+    background-color: var(--highlight1);
+    color: var(--light)
+}
+
+.pan3 {
+    background-color: var(--highlight2);
+    color: var(--dark);
+}
+
+.desc-box {
+    position: absolute;
+    right: 2rem;
+    bottom: 25%;
+    text-align: right;
+    padding: 0 1rem;
+    z-index: -1;
+    width: 30%;
+    height: 30%;
+    background-color: #fcf9f1a8;
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+}
+
+.desc-box:hover {
+    background-color: var(--light);
+}
+
+.byline-container {
+    width: 14%;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -1;
+}
+
+.byline-container > img {
+    background-color: #fcf9f1a8;
+    border-radius: 20px;
+}
+
+.byline {
+    padding: 5px 1rem;
+    border-radius: 20px;
+    height: 1rem;
+    background-color: #fcf9f1a8;
+}
+
+/* Transitional classes */
+.panel-open {
+    flex: 5;
+}
+
+.panel-open > * {
+    background-color: #fcf9f1a8;
+    color: var(--dark);
+}
+
+.panel-open > *:last-child {
+    transform: translateY(0%);
+}
+
+/* Animation Section */
